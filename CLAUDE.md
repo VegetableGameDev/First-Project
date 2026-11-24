@@ -1,9 +1,9 @@
-# Project: <GAME NAME> (2D roguelite, Godot 4)
+# Project: <Project 1> (2D roguelite, Godot 4)
 
 A small 2D roguelite built as a learning project. Prefer simple, readable, working code over clever or generic systems.
 
 ## Stack
-- Godot <EXACT VERSION, e.g. 4.x.y>. Godot 4 only: no Godot 3 APIs or syntax.
+- Godot <4.7.2>. Godot 4 only: no Godot 3 APIs or syntax.
 - GDScript only, with static typing (typed variables, parameters, return types).
 
 ## Commands
