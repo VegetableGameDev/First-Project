@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://x7qkhq36rkwb"]
+
+[ext_resource type="Script" uid="uid://ywhln6xgoygs" path="res://scenes/pickup.gd" id="1_pg2rt"]
+[ext_resource type="Texture2D" uid="uid://d2cgn1puj7f5r" path="res://icon.svg" id="2_7cqbe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_py7os"]
+radius = 16.0
+
+[node name="Pickup" type="Area2D" unique_id=1449806387]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_pg2rt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2022609760]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_7cqbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1639285069]
+shape = SubResource("CircleShape2D_py7os")

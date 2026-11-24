@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://b4vqie5ph4v1a"]
 
+[ext_resource type="Script" uid="uid://b500dvqhvursa" path="res://scenes/room.gd" id="1_ffxv4"]
+[ext_resource type="PackedScene" uid="uid://x7qkhq36rkwb" path="res://scenes/pickup.tscn" id="2_85yof"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py7os"]
 size = Vector2(1152, 32)
 
@@ -12,7 +15,9 @@ size = Vector2(32, 648)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14vil"]
 size = Vector2(32, 648)
 
-[node name="Room" type="Node2D" unique_id=464039190]
+[node name="Room" type="Node2D" unique_id=464039190 node_paths=PackedStringArray("pickups")]
+script = ExtResource("1_ffxv4")
+pickups = NodePath("Pickups")
 
 [node name="WallColor" type="ColorRect" parent="." unique_id=974763337]
 offset_right = 1152.0
@@ -47,3 +52,16 @@ debug_color = Color(1, 1, 1, 0.41960785)
 position = Vector2(1136, 324)
 shape = SubResource("RectangleShape2D_14vil")
 debug_color = Color(1, 1, 1, 0.41960785)
+
+[node name="Pickups" type="Node2D" parent="." unique_id=645127778]
+
+[node name="Pickup1" parent="Pickups" unique_id=1449806387 instance=ExtResource("2_85yof")]
+position = Vector2(833, 140)
+
+[node name="Pickup2" parent="Pickups" unique_id=1746438860 instance=ExtResource("2_85yof")]
+position = Vector2(746, 425)
+points = 2
+
+[node name="Pickup3" parent="Pickups" unique_id=509924851 instance=ExtResource("2_85yof")]
+position = Vector2(967, 470)
+points = 3

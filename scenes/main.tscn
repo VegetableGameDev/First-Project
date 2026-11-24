@@ -2,10 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://b4vqie5ph4v1a" path="res://scenes/room.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://baumdm6ilv4va" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bugvvvc18p05f" path="res://scenes/main.gd" id="1_sugp2"]
 
-[node name="Main" type="Node2D" unique_id=1828752017]
+[node name="Main" type="Node2D" unique_id=1828752017 node_paths=PackedStringArray("room", "score_label")]
+script = ExtResource("1_sugp2")
+room = NodePath("Room")
+score_label = NodePath("HUD/ScoreLabel")
 
 [node name="Room" parent="." unique_id=464039190 instance=ExtResource("1_0wfyh")]
 
 [node name="Player" parent="." unique_id=1532174093 instance=ExtResource("1_o5qli")]
 position = Vector2(576, 324)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1985746412]
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=1088500108]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 36.416
+offset_bottom = 39.0
