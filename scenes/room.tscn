@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b4vqie5ph4v1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py7os"]
+size = Vector2(1152, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffxv4"]
+size = Vector2(1152, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85yof"]
+size = Vector2(32, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14vil"]
+size = Vector2(32, 648)
+
+[node name="Room" type="Node2D" unique_id=464039190]
+
+[node name="WallColor" type="ColorRect" parent="." unique_id=974763337]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.40649524, 0.42936155, 0.42087305, 1)
+
+[node name="Floor" type="ColorRect" parent="." unique_id=1690761068]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1120.0
+offset_bottom = 616.0
+color = Color(0.873056, 0.6076927, 0.76207966, 1)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=360579816]
+
+[node name="Wall1" type="CollisionShape2D" parent="Walls" unique_id=1605137674]
+position = Vector2(576, 16)
+shape = SubResource("RectangleShape2D_py7os")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[node name="Wall2" type="CollisionShape2D" parent="Walls" unique_id=1168297635]
+position = Vector2(576, 632)
+shape = SubResource("RectangleShape2D_ffxv4")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[node name="Wall3" type="CollisionShape2D" parent="Walls" unique_id=2138673398]
+position = Vector2(16, 324)
+shape = SubResource("RectangleShape2D_85yof")
+debug_color = Color(1, 1, 1, 0.41960785)
+
+[node name="Wall4" type="CollisionShape2D" parent="Walls" unique_id=862759675]
+position = Vector2(1136, 324)
+shape = SubResource("RectangleShape2D_14vil")
+debug_color = Color(1, 1, 1, 0.41960785)
